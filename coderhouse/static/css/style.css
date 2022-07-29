@@ -16,7 +16,6 @@
 }
 .intro{
     width: 100%;
-    border: 2px solid red;
     display: flex;
     flex-wrap: wrap;
     
@@ -37,16 +36,14 @@
     width: 40%;
     display: block;
     margin: auto;
-    border: 2px solid blue;
-    
+    overflow: hidden;
+    border-radius: 20px;    
 }
 
 .owner img{
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-    
-
 }
 
 .shortintro {
@@ -56,7 +53,9 @@
 }
 
 .aboutme-info {
-    margin-top: 2rem;
+    margin-top:auto;
+    display: block;
+    width: 100%;
 }
 
 .span-title {
@@ -66,7 +65,13 @@
     font-family: "Lato", sans-serif;
     line-height: 1.66;
 }
-
+.headings-div{
+    background-color: #128C7E;
+    border-radius: 20px;
+}
+.headings{
+    font-size: 2rem;
+}
 a {
     text-decoration: none;
     color: rgb(74, 74, 209);
@@ -83,11 +88,11 @@ a {
     background-color: rgb(70, 70, 160);
 
 }
-
 .about-btns {
     margin-top: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    font-size: 1rem;
+
 }
 .whatsBack{
     background-color: #128C7E;
@@ -110,16 +115,18 @@ hr {
     border-style: inset;
     border-width: 1px;
   }
-.card{
-    max-width: 100%;
-    width: 18rem;
-    
-}
 .visit{
-    background-color: rgb(11, 140, 97);
+    display:  block;
+    /* background-color: rgb(162, 31, 214); */
+    background-color: rgb(17, 179, 125);
+
+    width: 100%;
+    border: 1px solid black;
+    font-weight: 700;
 }
 .btn:hover{
-    background-color: rgb(17, 179, 125);
+    background-color: rgb(9, 76, 53);
+    color: white ;
 }
 
 .info{
@@ -127,19 +134,31 @@ hr {
     width: 30rem;
 }
 
-.card img{
-    height: 20rem;
-    width: 20rem;
+/* projects part css */
+.card{
+    overflow: hidden;
+    border-radius: 20px;
 }
-
+.vert-center{
+    margin: auto;
+    display: block;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 @media only screen and (max-width: 600px) {
+    .about-btns {
+        margin-top: 1rem;
+        display: flex;
+        font-size: 0.7rem;
+    
+    }
     .intro{
         width: 100%;
-        border: 2px solid red;
         display: flex;
-        flex-wrap: wrap-reverse;
-        
-    
+        flex-wrap: wrap-reverse;    
     }
     .grey{
         background-color: rgb(205, 199, 199);
@@ -156,7 +175,8 @@ hr {
         width: 100%;
         display: block;
         margin: auto;
-        border: 2px solid blue;
+        overflow: hidden;
+        border-radius: 20px;
         
     }
     
