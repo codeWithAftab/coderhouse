@@ -1,0 +1,20 @@
+{% block projects %}
+<div id="projects" class="container mt-3">
+    <p class="h2 text-center">My Projects.</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+      {% for project in projects %}
+          <div class="card">
+            <div class="proj-img ">
+              <img src="/media/{{project.image}}" class="card-img-top" alt="...">
+            </div>
+            <div class="about-proj mt-5">
+              <div class="info">
+                <h5 class="card-title h2">{{project.name}}</h5>
+                <p class="card-text">{{project.desc}}</p>
+                <a href="{{project.url}}" class="btn my-btn visit mt-3">Visit project</a>
+              </div>
+            </div>
+          </div>        
+      {% endfor %}
+  </div>
+{% endblock projects %}

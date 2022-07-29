@@ -1,0 +1,218 @@
+{% load static %}
+{% block about %}
+<hr>
+<section id="Portfolio">
+  <div class="container">
+    <div class="about-card mt-3">
+      <div class="intro">
+        <div class="shortintro">
+          <div class="aboutme-title">
+            <p class="h1">
+              I am {{owner.name}}.
+            </p>
+          </div>
+          <div class="aboutme-text">
+            <p class="card-text">
+              {{owner.bio}}
+              {% comment %}  {% endcomment %}
+            </p>
+          </div>         
+          <div class="aboutme-info">
+            <p class="card-text">
+              <span class="span-title">Phone</span>
+              <span>
+                <a href="tel:+91{{owner.phone}}">+91-{{owner.phone}}</a>
+              </span>
+            </p>
+            <p class="card-text">
+              <span class="span-title">Email</span>
+              <span>
+                <a href="mailto:{{owner.email}}">{{owner.email}}</a>
+              </span>
+            </p>
+            <p class="card-text">
+              <span class="span-title">Address</span>
+              <span>
+                {{owner.address}}
+              </span>
+            </p>
+            <p class="card-text">
+              <span class="span-title">Social</span>
+              <span>
+                <a href="{{owner.facebook}}">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="{{owner.linkdin}}">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="{{owner.github}}">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="{{owner.instagram}}">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </span>
+            </p>
+          </div>      
+          <div class="about-btns mt-4">
+            <a href="https://api.whatsapp.com/send?phone={{owner.phone}}&text=Hello Aftab" class="my-btn whatsBack ml-3" ><i class="fa-brands fa-whatsapp"></i> Contact Me On watsup</a>
+            <a class="my-btn text-dark mx-2 grey" href="tel:+91{{owner.phone}}">Call Now</a>
+          </div>   
+        </div>
+      </div>
+
+      <div class="owner">
+        <img src="/media/{{owner.image}}" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <title>About us</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+                <div class="container-fluid">
+                    <div class="logo mr-3">
+                        <a class="btn btn-outline-dark mr-5"><i class="bi bi-code-slash mr-3"></i></a>
+                    </div>
+                    <a class="navbar-brand" href="#">CODER-HOUSE</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/about.html">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Web Development</a></li>
+                                    <li><a class="dropdown-item" href="#">Softeare Development</a></li>
+                                    <li><a class="dropdown-item" href="#">Hire A Python Expert</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div class="heading text-center my-2">
+                <p class="h3">About us</p>
+            </div>
+            <div class="container">
+
+                <hr >
+            </div>
+            <div class="container my-5">
+            <div class=" text-center mt-3 row">
+                <div class="col-md-4 card" style="width: 18rem;">
+                    <img class="card-img-top rounded" src="static/images/owner.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><strong class="h4">Aftab.</strong><br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8 align-middle">
+                    <div id="typer" class="container">
+                        <p  class="align-middle h5"><strong class="h2 ">Founder of Coder-House.</strong><br>
+                        </p>
+                    </div>
+                    <p id="parent" class="h3 text-danger">I am a <br></p>
+                    <strong id="text"class="h1">
+                    </strong> 
+                </div>
+                
+            </div>
+        </div>
+        </main>
+        <footer class="bg-dark text-center text-white mt-5 fixed-bottom">
+            <!-- Copyright -->
+            <div class="py-1 " style="background-color: rgba(0, 0, 0, 0.2);">
+              <section class="mb">
+                © 2023 Copyright:
+                <a class="text-white" href="#">Coder-House</a>
+                <!-- Facebook -->
+              </section>
+            </div>
+            <!-- Copyright -->
+          </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        
+        <script>
+            let parent = document.getElementById('parent')
+            var contents = ['Programmer',"Coder"]
+            let text = document.getElementById('text')
+            function typer(arr){
+                arr.forEach(element => {
+                    for (let i = 0; i < element.length; i++) {
+                            console.log(element[i])
+                            text.innerHTML += element.charAt(i)
+                    }
+                });
+            }
+            typer(contents)
+        </script>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    </body>
+
+</html> {% endcomment %}
