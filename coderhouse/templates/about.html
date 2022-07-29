@@ -5,6 +5,7 @@
   <div class="container">
     <div class="about-card mt-3">
       <div class="intro">
+        
         <div class="shortintro">
           <div class="aboutme-title">
             <p class="h1">
@@ -54,16 +55,18 @@
               </span>
             </p>
           </div>      
-          <div class="about-btns mt-4">
-            <a href="https://api.whatsapp.com/send?phone={{owner.phone}}&text=Hello Aftab" class="my-btn whatsBack ml-3" ><i class="fa-brands fa-whatsapp"></i> Contact Me On watsup</a>
-            <a class="my-btn text-dark mx-2 grey" href="tel:+91{{owner.phone}}">Call Now</a>
+          
+          <div class="about-btns mt-2">
+            <a href="https://api.whatsapp.com/send?phone={{owner.phone}}&text=Hello Aftab" class="my-btn whatsBack ml-3 mt-2" ><i class="fa-brands fa-whatsapp"></i> Contact Me On watsup</a>
+            <a class="my-btn text-dark mx-2 mt-2 grey" href="tel:+91{{owner.phone}}">Call Now</a>
           </div>   
+        </div>
+        <div class="owner">
+          <img src="/media/{{owner.image}}" alt="" srcset="">
         </div>
       </div>
 
-      <div class="owner">
-        <img src="/media/{{owner.image}}" alt="" srcset="">
-      </div>
+      
     </div>
   </div>
 </section>
