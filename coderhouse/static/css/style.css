@@ -5,21 +5,13 @@
     text-transform: uppercase;
     font-family: "Lato", sans-serif;
 }
-.kavbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-*{
+/* *{
     font-family: "Lato", sans-serif;
-
-}
+} */
 .intro{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    
-
 }
 .grey{
     background-color: rgb(205, 199, 199);
@@ -40,25 +32,21 @@
     overflow: hidden;
     border-radius: 20px;    
 }
-
 .owner img{
     max-width: 100%;
     max-height: 100%;
     margin: auto;
 }
-
 .shortintro {
     margin: 2rem 2rem;
     word-wrap: break-word;
     width: 50%;
 }
-
 .aboutme-info {
     margin-top:auto;
     display: block;
     width: 100%;
 }
-
 .span-title {
     font-size: 0.7rem;
     font-weight: 700;
@@ -77,14 +65,12 @@ a {
     text-decoration: none;
     color: rgb(74, 74, 209);
 }
-
 .span-title+span {
     color: rgb(74, 74, 209);
     font-size: 1rem;
     padding-left: 2rem;
     opacity: 0.8;
 }
-
 .blue {
     background-color: rgb(70, 70, 160);
 
@@ -115,7 +101,7 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
-  }
+}
 .visit{
     display:  block;
     /* background-color: rgb(162, 31, 214); */
@@ -129,20 +115,21 @@ hr {
     background-color: rgb(9, 76, 53);
     color: white ;
 }
-
 .info{
     text-transform: capitalize;
     width: 30rem;
 }
-
 /* projects part css */
 .card{
     overflow: hidden;
     border-radius: 20px;
 }
 .card img{
-    
-    max-height: 90vh;
+    min-height: 60vh;
+    max-height: 100vh;
+}
+.proj-title{
+    min-height: 50px;
 }
 .vert-center{
     margin: auto;
