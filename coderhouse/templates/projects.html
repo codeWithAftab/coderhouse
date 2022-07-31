@@ -1,21 +1,25 @@
 {% block projects %}
-<div id="projects" class="container mt-3">
+<div id="projects" class="container mt-2">
   <div class="headings-div text-center">
     <p class="headings ">My Projects.</p>
   </div>
-    <div class="row projects row-cols-1 row-cols-md-2 g-4">
-      {% for project in projects %}
-          <div class="card p-0" style="width: 18rem;">
-            <div class="proj-img  vert-center">
-            <img class="card-img-top " src="/media/{{project.image}}" alt="Card image cap">
-            </div>
-            
-            <div class="card-body">
-              <h5 class="card-title proj-title">{{project.name}}</h5>
-              <!-- <p class="card-text">{{project.desc}}</p> -->
-              <a href={{project.url}}" class="btn visit mt-2">Visit Project</a>
-            </div>
-          </div>     
-      {% endfor %}
+</div>
+<div class="container mt-2 mb-3 d-flex justify-content-center">
+  <div class="row projects mt-2">
+    {% for project in projects %}
+    <div class="card mx-3 p-0" style="width:18rem;">
+      <div class="proj-img">
+        <img class="card-img-top " src="/media/{{project.image}}" alt="Card image cap">
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title proj-title">{{project.name}}</h5>
+        <!-- <p class="card-text">{{project.desc}}</p> -->
+        <a href="{{project.url}}" class="btn visit mt-2"><i class="fa-solid  fa-arrow-up-right"></i> Visit Project</a>
+      </div>
+    </div>
+    
+    {% endfor %}
   </div>
-{% endblock projects %}
+</div>
+  {% endblock projects %}

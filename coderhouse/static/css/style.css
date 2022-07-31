@@ -1,14 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+body{
+    background-color: rgb(238, 238, 238);
+}
 .nav-link {
     color: black;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Lato", sans-serif;
+    /* font-family: "Lato", sans-serif; */
+    font-family: cursive;
+}
+.navbar-brand{
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 /* *{
     font-family: "Lato", sans-serif;
 } */
 .intro{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +29,7 @@
     color: white;
 }
 .about-card {
+    font-size: 1rem;
     display: block;
 }
 .card-text {
@@ -50,16 +62,23 @@
 .span-title {
     font-size: 0.7rem;
     font-weight: 700;
+    /* font-family: cursive; */
+
     text-transform: uppercase;
-    font-family: "Lato", sans-serif;
+    /* font-family: sans-serif; */
     line-height: 1.66;
 }
 .headings-div{
-    background-color: #128C7E;
-    border-radius: 20px;
+    /* background-color: #128C7E; */
+    font-family: cursive;
+    
+    border-radius: 10px;
+    margin-bottom: 0px;
 }
 .headings{
     font-size: 2rem;
+    color: black;
+    font-weight: 500    ;
 }
 a {
     text-decoration: none;
@@ -84,14 +103,18 @@ a {
 .whatsBack{
     background-color: #128C7E;
 }
+.whatsBack:hover{
+    background-color: #0e6f64;
+    border: 1px solid black;
+
+}
 .my-btn {
     color: white;
     padding: 1rem 1.5rem;
-    border-radius: 0.3rem;
+    border-radius: 20px;
     text-transform: uppercase;
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    border: none;
+    font-family: 'Mouse Memoirs', cursive;
+    font-size: 1.2rem;
 }
 hr {
     display: block;
@@ -101,6 +124,9 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+}
+.form-control{
+    border: 1px solid black;
 }
 .visit{
     display:  block;
@@ -120,16 +146,18 @@ hr {
     width: 30rem;
 }
 /* projects part css */
-.card{
-    overflow: hidden;
-    border-radius: 20px;
+
+.card-img-top{
+    
+  /* ...existing styles */
+  object-fit: cover;
+  height: max(15rem, 40vh);
 }
-.card img{
-    min-height: 60vh;
-    max-height: 100vh;
-}
+
 .proj-title{
     min-height: 50px;
+    text-transform: capitalize;
+    font-family: cursive;
 }
 .vert-center{
     margin: auto;
@@ -137,15 +165,58 @@ hr {
 }
 .projects{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* margin-top: 2px; */
+    background-color: white;
+    padding: 2rem 0rem 2rem 0rem;
+    border-radius: 20px;
+    width: 90%;
+    overflow: scroll;
+    /* border: 2px solid red; */
+    justify-content: center;
+    flex-wrap: nowrap;
+
+
+
 }
-@media only screen and (max-width: 600px) {
+
+
+/* contact-us */
+.contact{
+    font-family: 'Mouse Memoirs', sans-serif;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contact-text{
+    
+    display: block;
+    margin: auto;
+    height: 90%;
+}
+#contact-info-text{
+    max-width: 70vh;
+}
+.querybox{
+    font-size: 1.5rem;
+    width: 45%;
+}
+@media only screen and (max-width: 800px) {
     .about-btns {
         margin-top: 1rem;
         display: flex;
+        flex-wrap: wrap;
         font-size: 0.7rem;
-    
+    }
+    .my-btn {
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-family: 'Mouse Memoirs', cursive;
+        font-size: 1.2rem;
     }
     .intro{
         width: 100%;
@@ -161,10 +232,11 @@ hr {
     }
     .card-text {
         margin: 0.3rem;
+        width: 100%;
         margin-top: 0.5rem;
     }
     .owner{
-        width: 100%;
+        width: 70%;
 
         display: block;
         margin: auto;
@@ -172,7 +244,9 @@ hr {
         border-radius: 20px;
         
     }
-    
+    .querybox{
+        width: 100%;
+    }
     .owner img{
         max-width: 100%;
         max-height: 100%;
@@ -181,7 +255,7 @@ hr {
     
     }
     .shortintro {
-        margin: 2rem 2rem;
+        margin: 1rem 1rem;
         /* word-wrap: break-word; */
         width: 100%;
     }
@@ -190,5 +264,11 @@ hr {
         font-size: 0.7rem;
         padding-left: 0.5rem;
         opacity: 0.8;
+    }
+    .contact-text{
+    
+        display: none;
+        margin: auto;
+        height: 90%;
     }
   }
