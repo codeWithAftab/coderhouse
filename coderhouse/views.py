@@ -1,7 +1,8 @@
+from asyncio import constants
 from multiprocessing import context
 from django.shortcuts import render,redirect
 from coderhouse.models import Profile,myProjects
-
+from django.templatetags.static import static
 # Create your views here.
 
 
@@ -12,6 +13,9 @@ def home(request):
     print(projects)
     context = {
         "projects":projects,
-        "owner":owner
+        "owner":owner,
+        "resume":"assets/resume.pdf"
     }
+    print()
+    print(context)
     return render(request,"index.html",context)

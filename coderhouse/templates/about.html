@@ -34,7 +34,7 @@
             <p class="card-text">
               <span class="span-title">Address</span>
               <span>
-                {{owner.address}}
+                <a>{{owner.address}}</a>
               </span>
             </p>
             <p class="card-text">
@@ -57,8 +57,9 @@
           </div>      
           
           <div class="about-btns mt-2">
-            <a href="https://api.whatsapp.com/send?phone={{owner.phone}}&text=Hello Aftab" class="my-btn whatsBack ml-3 mt-2" ><i class="fa-brands fa-whatsapp"></i> watsup now</a>
-            <a class="my-btn text-dark mx-2 mt-2 grey" href="tel:+91{{owner.phone}}"><i class="fa-solid fa-phone"></i> Call Now</a>
+            <a class="my-btn text-light mx-2 mt-2 purple" href="{% static resume %}"><i class="fa-solid fa-download"></i> Download my Resume</a>
+            <a target="_blank" href="https://api.whatsapp.com/send?phone={{owner.phone}}&text=Hello Aftab" class="my-btn whatsBack ml-3 mt-2" ><i class="fa-brands fa-whatsapp"></i> watsup now</a>
+            {% comment %} <a class="my-btn text-dark mx-2 mt-2 grey" href="tel:+91{{owner.phone}}"><i class="fa-solid fa-phone"></i> Call Now</a> {% endcomment %}
           </div>   
         </div>
         <div class="owner">

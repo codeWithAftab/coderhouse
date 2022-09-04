@@ -1,0 +1,22 @@
+let a = document.getElementById("scroll")
+console.log("its eo")
+a.addEventListener("click",()=>{
+    console.log("hey")
+    scrollBy()
+    scrollBy(0,520)
+    // scroll(200)
+})
+let c = document.getElementById("contact")
+c.addEventListener("click",()=>{
+    console.log("hey")
+    scrollBy()
+    scrollBy(0,1000)
+    // scroll(200)
+})
+let h = document.getElementById("home")
+h.addEventListener("click",()=>{
+    console.log("hey")
+    scrollBy()
+    scrollBy(0,100)
+    // scroll(200)
+})
