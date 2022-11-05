@@ -28,3 +28,18 @@ class Profile(models.Model):
     
     def __str__(self) -> str:
         return self.name
+
+class Project(models.Model):
+    name = models.CharField(max_length=122,default="",null=True,blank=True)
+    eno = models.CharField(max_length=122,default="",null=True,blank=True)
+    phone = models.IntegerField(null=True,blank=True)
+    proj_title = models.CharField(max_length=200,default="",null=True,blank=True)
+    technology = models.CharField(max_length=122,default="",null=True,blank=True)
+    frontend_tech = models.TextField(default="",null=True,blank=True)
+    backend_tech = models.TextField(default="",null=True,blank=True)
+    proj_desc = models.TextField(default="",null=True,blank=True)
+    created_at = models.DateTimeField(auto_now=True)
+
+       
+    def __str__(self) -> str:
+        return f"{self.name} ({str(self.eno)})"

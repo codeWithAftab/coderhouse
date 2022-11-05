@@ -1,0 +1,41 @@
+{% load static %}
+{% block project %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BCA5 project Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static 'css/style2.css' %}>
+
+</head>
+<body>
+    <!-- <img class="bg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFrVvEqZDicnL3TniTNdDCcE5Rmo5EXxlzRr1jceytXWEaBVf7MetBBZ3f10pSAJQXja4&usqp=CAU" alt="IIT Kharagpur"> -->
+    <div class="container mt-4 mb-2">
+        <h1>Welcome to PC Training Institute BCA-5 Project Database.</h3>
+        <p>Enter your details and submit this form to confirm your Name for BCA-5 project.</p> 
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/students/" name="dataForm" method="post">
+            {% csrf_token %}
+            <input class="my-1 p-2" type="text" name="name" id="name" placeholder="Enter your name"  required>
+            <input class="my-1 p-2" type="phone" name="phone" id="phone" placeholder="Enter your phone" required>
+            <input class="my-1 p-2" type="number" name="eno" id="eno" placeholder="Enter your Enrollment Number" required>
+            <input class="my-1 p-2" type="text" name="title" id="title" placeholder="Enter your project title">
+            <input class="my-1 p-2" type="text" name="front_tech" id="front_tech" placeholder="frontend Technology you want to use in your project. (ex-html,css,js,boostrap,react etc..)" required>
+            <input class="my-1 p-2" type="text" name="backend_tech" id="backend_tech" placeholder="Backend Technology you want to use in your project. (ex-django,spring,flask,mysql etc..)" required>
+            <input class="my-1 p-2" type="text" name="other_tech" id="other_tech" placeholder="Any other Technology you want to use in your project. (ex-strapi,etc..)[optional]">
+            <textarea class="my-1 p-2" name="desc" id="desc" cols="30" rows="5" placeholder="Tell about your Project Description." required></textarea>
+            <button type="submit" class=" my-1 btn btn-lg btn-purple">Submit</button> 
+        </form>
+    </div>
+    <script src="script.js  "></script>
+    
+</body>
+</html>
+{% endblock project %}
